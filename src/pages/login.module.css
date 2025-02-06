@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background-image: url("../image/2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.inputTik {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #fff;
+  justify-content: center;
+}
+
+.inputTik input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ff6f00;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.inputTik input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+.inputTik p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.inputTik p:hover {
+  color: #ff6f00;
+  cursor: pointer;
+}
+
+.mainContainer {
+  background: rgba(18, 18, 18, 0.85);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 10px 40px 0 rgba(135, 66, 31, 0.5);
+  width: 100%;
+  max-width: 500px;
+  height: 95vh;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.HeaderForm {
+  margin-bottom: 30px;
+}
+
+.HeaderForm h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ff6f00;
+  margin-bottom: 15px;
+}
+
+.HeaderForm p {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.HeaderForm a {
+  color: #ff6f00;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.HeaderForm a:hover {
+  color: #ff8f00;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  margin: 15px 0;
+  border: 2px solid #ff6f00;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff6f00;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  margin: 18px 0;
+  border-radius: 10px;
+  background-color: #ff6f00;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.suggestForm button.google,
+.suggestForm button.apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  color: #333;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 15px 0;
+}
+
+.suggestForm button.google:hover,
+.suggestForm button.apple:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestForm button i {
+  font-size: 22px;
+}
