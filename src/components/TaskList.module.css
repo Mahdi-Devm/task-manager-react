@@ -1,0 +1,121 @@
+.taskList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
+
+  border-radius: 20px;
+}
+.taskItem {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.taskItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+.taskTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.taskDescription {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+.taskActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button.completed {
+  background: linear-gradient(145deg, #4caf50, #66bb6a);
+}
+
+.button.inProgress {
+  background: linear-gradient(145deg, #ff9800, #ffa726);
+}
+
+.button.delete {
+  background: linear-gradient(145deg, #f44336, #ef5350);
+}
+.button .emoji {
+  font-size: 16px;
+}
+/* استایل سرچ بار */
+.searchContainer {
+  position: relative;
+  width: 2000px;
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.searchInput {
+  width: 1000px;
+  padding: 12px 40px;
+  border-radius: 20px;
+  border: none;
+
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchInput::placeholder {
+  color: #888;
+}
+
+.searchInput:focus {
+  box-shadow: 0 4px 5px rgba(255, 165, 0, 0.3);
+  color: rgb(71, 71, 71);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: orange;
+  font-size: 18px;
+}

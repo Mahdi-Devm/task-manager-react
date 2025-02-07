@@ -1,0 +1,104 @@
+.container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: auto 1fr;
+  height: 90vh;
+  width: 90vw;
+  overflow: hidden;
+}
+
+.taskContent {
+  flex: 1;
+  padding: 20px;
+
+  border-radius: 12px;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.taskSection {
+  margin-top: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.taskItem {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskItem:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.taskActions {
+  display: flex;
+  gap: 10px;
+}
+
+.taskActions button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.taskActions button:hover {
+  background-color: #2980b9;
+}
+
+.addTaskForm {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.addTaskForm input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.addTaskForm button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addTaskForm button:hover {
+  background-color: #218838;
+}

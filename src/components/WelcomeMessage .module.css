@@ -4,8 +4,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* پس‌زمینه تیره و مات */
-  backdrop-filter: blur(10px); /* محو کردن محتوا پشت */
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;

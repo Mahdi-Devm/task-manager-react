@@ -8,7 +8,7 @@ function HomePage() {
       {" "}
       <HeaFoot />
       <Maindashboard />
-      <WelcomeMessage text="Welcome to My App!" />
+      <WelcomeMessage text="Welcome to My Home Page!" />
     </div>
   );
 }
