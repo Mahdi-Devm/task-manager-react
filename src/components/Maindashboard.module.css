@@ -1,0 +1,97 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+  border-top: 1px solid transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: start;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  flex: 1;
+  background: rgba(30, 30, 30, 0.8);
+  box-shadow: 0px 4px 15px rgba(255, 140, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(255, 140, 0, 0.4);
+  background: rgba(40, 40, 40, 0.9);
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  color: #ffb74d;
+  font-weight: bold;
+}
+
+.cardNumber {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.percentageChange {
+  font-size: 14px;
+  color: gray;
+  margin-top: 5px;
+}
+
+.cardIcon {
+  font-size: 50px;
+  color: #ff8f00;
+  background: rgba(255, 111, 0, 0.2);
+  padding: 12px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardIcon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .topSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

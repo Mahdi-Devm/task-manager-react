@@ -1,10 +1,13 @@
-.contianer {
+.container {
   background: rgba(255, 255, 255, 0.25);
-  display: flex;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 180vh;
+
+  display: grid;
+  grid-template-columns: 80px 1fr; /* یک ستون برای نوار کناری و یک ستون برای محتوا */
+  grid-template-rows: auto 1fr; /* یک ردیف برای هدر و یک ردیف برای بقیه محتوا */
   height: 90vh;
+  width: 90vw;
+  overflow: hidden;
 }

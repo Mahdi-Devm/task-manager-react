@@ -1,0 +1,15 @@
+.header {
+  grid-column: span 2;
+
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.navbar {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
