@@ -1,4 +1,5 @@
 .container {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
   background: linear-gradient(
     135deg,
     rgba(10, 10, 10, 0.7),
@@ -17,75 +18,349 @@
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); /* سایه‌ی نارنجی زیبا */
   padding: 20px;
 }
+/* فونت جدید */
 
-.leftSection {
+.profileBox {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif; /* فونت روبات */
+}
+
+.profileBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: #ff7300; /* رنگ نارنجی جذاب */
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+h3:hover {
+  color: #ff9800; /* رنگ نارنجی تیره برای هاور */
+}
+
+.profileInfoBox {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profileLeft,
+.profileRight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   flex: 1;
 }
 
-.rightSection {
-  flex: 1;
+.profileImageContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profileImageContainer:hover {
+  transform: scale(1.1);
 }
 
 .profileImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.profileInfo {
-  font-size: 18px;
-  color: #333;
-}
-
-.box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
   width: 100%;
-}
-
-.box img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  height: 100%;
   object-fit: cover;
-  margin-right: 20px;
+  border-radius: 50%;
 }
 
-.box div {
-  flex: 1;
-}
-
-.box h3 {
-  font-size: 20px;
+.userInfo {
   color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+
+.userInfo h4 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-.box h5 {
-  font-size: 16px;
-  color: #666;
+.userInfo p {
+  font-size: 1rem;
+  color: #555;
   margin: 5px 0;
 }
 
-.box h5:first-of-type {
-  margin-top: 10px;
+.userInfo p:first-child {
+  color: #ff7300; /* رنگ نارنجی برای ایمیل */
+  font-weight: 600;
 }
 
-.WelcomeMessage {
+.userInfo p:nth-child(2) {
+  font-weight: 400;
+}
+
+.userInfo p:last-child {
+  color: #007bff; /* رنگ آبی برای شغل */
+  font-weight: 600;
+}
+
+/* تغییرات برای هاور */
+.userInfo p:hover {
+  color: #ff9800; /* تغییر رنگ در هنگام هاور */
+  font-weight: 600;
+}
+
+/* اضافه کردن استایل برای بخش اطلاعات اضافی */
+.extraInfo {
   margin-top: 20px;
-  font-size: 20px;
-  color: #333;
+  font-size: 1rem;
+  color: #555;
+}
+
+.extraInfo p {
+  color: #007bff; /* رنگ آبی برای اطلاعات اضافی */
+}
+
+.extraInfo strong {
   font-weight: bold;
+}
+
+/* افکت هاور برای اطلاعات اضافی */
+.extraInfo p:hover {
+  color: #ff9800;
+}
+
+/* طراحی باکس پروفایل */
+.profileBox {
+  background: rgba(246, 212, 212, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(138, 133, 133, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.profileBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* هدر */
+.header {
   text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* محتوا */
+.content {
+  display: flex; /* استفاده از flexbox برای قرار گرفتن باکس‌ها کنار هم */
+  gap: 20px; /* فاصله کمتر بین باکس‌ها */
+  flex-wrap: wrap; /* اجازه دادن به باکس‌ها که در صورت لزوم به خط جدید بروند */
+  width: 100%;
+  justify-content: space-between;
+}
+
+.profileBox {
+  background: rgba(246, 212, 212, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(138, 133, 133, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.profileBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: #ff7300;
+  text-align: center;
+}
+
+.profileInfoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profileLeft,
+.profileRight {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex: 1;
+}
+
+.profileImageContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.profileImageContainer:hover {
+  transform: scale(1.1);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.userInfo {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+
+.userInfo h4 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.profileBox {
+  background: rgba(246, 212, 212, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(138, 133, 133, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.userInfo p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.userInfo p:first-child {
+  color: #ff7300;
+  font-weight: 600;
+}
+
+.userInfo p:nth-child(2) {
+  font-weight: 400;
+}
+
+.userInfo p:last-child {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* اضافه کردن استایل برای بخش اطلاعات اضافی */
+.extraInfo {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.extraInfo p {
+  color: #007bff;
+}
+
+.extraInfo strong {
+  font-weight: bold;
+}
+
+/* باکس پیشرفت */
+.progressBox {
+  background: rgba(246, 212, 212, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(138, 133, 133, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex: 1 1 45%;
+  backdrop-filter: blur(5px);
+}
+
+/* باکس تسک‌ها و فعالیت‌ها */
+.taskActivityBox {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.taskBox,
+.recentActivityBox {
+  background: rgba(246, 212, 212, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(138, 133, 133, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex: 1 1 45%;
+  backdrop-filter: blur(5px);
+}
+
+.taskBox h3,
+.recentActivityBox h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* طراحی لیست‌ها */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 5px 0;
+  color: #555;
 }

@@ -1,68 +1,94 @@
-.container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+.addTaskContainer {
+  background-color: rgba(255, 87, 34, 0.1); /* تغییر به نارنجی کم‌رنگ */
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.addTaskTitle {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 15px;
   text-align: center;
 }
 
-.title {
-  font-size: 1.8rem;
-  color: #ff6347;
-  margin-bottom: 15px;
-}
-
-.form {
+.addTaskForm {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.2);
+.inputField {
+  background: rgba(255, 255, 255, 0.1);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
   font-size: 1rem;
-  transition: 0.3s ease;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #ff6347;
   outline: none;
+  height: 40px;
 }
 
-.addButton {
-  background-color: #ff6347;
+.inputField:focus {
+  border: 1px solid #ff9800; /* رنگ مرز در حالت focus */
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.7);
+}
+
+.datePickerContainer {
+  position: relative;
+}
+
+.dateIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff9800; /* رنگ نارنجی برای آیکن تاریخ */
+  font-size: 18px;
+}
+
+.addTaskButton {
+  background: linear-gradient(
+    145deg,
+    #ff5722,
+    #ff9800
+  ); /* رنگ‌های نارنجی برای دکمه */
   color: white;
-  border: none;
-  padding: 12px 24px;
+  padding: 12px 20px;
   border-radius: 8px;
+  font-size: 14px;
   cursor: pointer;
-  font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  border: none;
+  font-weight: 500;
+  transition: background 0.3s;
 }
 
-.addButton:hover {
-  background-color: #ff4500;
-  transform: scale(1.05);
+.addTaskButton:hover {
+  background: linear-gradient(145deg, #ff9800, #ff5722);
 }
 
-.icon {
-  font-size: 1.4rem;
+.addTaskButton:active {
+  background: linear-gradient(145deg, #ff5722, #ff9800);
+}
+
+.successModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 87, 34, 0.8); /* مودال با رنگ نارنجی */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
 }

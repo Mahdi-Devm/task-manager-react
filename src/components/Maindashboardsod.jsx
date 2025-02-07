@@ -22,14 +22,11 @@ const data = [
 function Maindashboardsod() {
   return (
     <div>
-      {/* بخش بالایی شامل کارت‌ها */}
-      <div className={styles.topSection}>{/* کارت‌ها */}</div>
+      <div className={styles.topSection}></div>
 
-      {/* ادامه محتوا */}
       <div className={styles.bottomSection}>
         <h4 className={styles.bottomTitle}>روند سود</h4>
 
-        {/* نمودار روند سود */}
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={data}>
             <CartesianGrid

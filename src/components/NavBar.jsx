@@ -7,7 +7,6 @@ function NavBar() {
   const nav = useNavigate();
   return (
     <div className={styles.container}>
-      {/* لوگو */}
       <div>
         <Logo />
         <div className={styles.icons}>
@@ -22,7 +21,7 @@ function NavBar() {
           <FaTrash onClick={() => nav("/notPage")} title="یاداشت ها" />
         </div>
       </div>
-      {/* حساب کاربری */}
+
       <div className={styles.account}>
         <img
           onClick={() => nav("/Profile")}
