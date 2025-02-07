@@ -57,23 +57,71 @@ body {
   color: #ff6f00;
   cursor: pointer;
 }
-
+.imageSvg {
+  background-image: url("../image/undraw_projections_fhch-removebg-preview.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .mainContainer {
-  background: rgba(18, 18, 18, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 25px;
   padding: 40px;
-  box-shadow: 0 10px 40px 0 rgba(135, 66, 31, 0.5);
-  width: 100%;
-  max-width: 500px;
-  height: 95vh;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(135, 71, 31, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
   text-align: center;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+
   transition: all 0.3s ease;
   overflow: hidden;
 }
+.imageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  background-image: url("../image/undraw_projections_fhch-removebg-preview.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
+.formContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* استایل ریسپانسیو */
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+}
 .HeaderForm {
   margin-bottom: 30px;
 }
@@ -141,26 +189,25 @@ button:active {
   transform: translateY(1px);
 }
 
-.suggestForm button.google,
-.suggestForm button.apple {
+.suggestForm {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   gap: 15px;
+  align-items: center;
+}
+
+.suggestForm button {
+  flex: 1;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.suggestForm button.google {
   background-color: #fff;
   color: #333;
-  font-size: 20px;
-  border-radius: 10px;
   border: 1px solid #ddd;
-  padding: 16px;
-  margin: 15px 0;
 }
 
-.suggestForm button.google:hover,
-.suggestForm button.apple:hover {
+.suggestForm button.google:hover {
   background-color: #f0f0f0;
-}
-
-.suggestForm button i {
-  font-size: 22px;
 }

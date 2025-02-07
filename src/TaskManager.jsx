@@ -1,4 +1,4 @@
-import Login from "./pages/Login";
+import Login from "./components/Login";
 
 export default function TaskManager() {
   return <Login />;
