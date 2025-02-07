@@ -1,0 +1,91 @@
+.container {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.7),
+    rgba(181, 102, 49, 0.5)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: auto 1fr;
+  height: 90vh;
+  width: 90vw;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); /* سایه‌ی نارنجی زیبا */
+  padding: 20px;
+}
+
+.leftSection {
+  flex: 1;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profileInfo {
+  font-size: 18px;
+  color: #333;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  width: 100%;
+}
+
+.box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.box div {
+  flex: 1;
+}
+
+.box h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.box h5 {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.box h5:first-of-type {
+  margin-top: 10px;
+}
+
+.WelcomeMessage {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}

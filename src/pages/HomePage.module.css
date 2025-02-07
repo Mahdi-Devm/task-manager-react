@@ -1,13 +1,19 @@
 .container {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 10px;
-
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.7),
+    rgba(181, 102, 49, 0.5)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 140, 0, 0.2);
   display: grid;
   grid-template-columns: 80px 1fr;
   grid-template-rows: auto 1fr;
   height: 90vh;
   width: 90vw;
   overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); /* سایه‌ی نارنجی زیبا */
+  padding: 20px;
 }

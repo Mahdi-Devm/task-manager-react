@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Logo from "./Logo";
 import styles from "./NavBar.module.css";
-import { FaHome, FaTasks, FaCog, FaPlusCircle } from "react-icons/fa";
+import { FaHome, FaTasks, FaPlusCircle, FaTrash } from "react-icons/fa";
 
 function NavBar() {
   const nav = useNavigate();
@@ -18,13 +18,14 @@ function NavBar() {
             title="افزودن تسک جدید"
             className={styles.addTaskIcon}
           />
-          <FaCog title="تنظیمات" />
+
+          <FaTrash onClick={() => nav("/notPage")} title="یاداشت ها" />
         </div>
       </div>
       {/* حساب کاربری */}
       <div className={styles.account}>
-        <FaCog title="حساب کاربری" />
         <img
+          onClick={() => nav("/Profile")}
           src="https://i.pravatar.cc/100"
           alt="User"
           className={styles.userImage}

@@ -6,6 +6,7 @@ import Login from "./components/Login.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Task from "./pages/Task.jsx";
 import AddTask from "./pages/AddTask.jsx";
+import Profile from "./pages/Profile.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/home" element={<LayOute />} />
         <Route path="/task" element={<Task />} />
         <Route path="/add-task" element={<AddTask />} />
+        <Route path="/Profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

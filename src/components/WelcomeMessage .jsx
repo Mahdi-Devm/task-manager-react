@@ -7,7 +7,7 @@ export default function WelcomeMessage({ text }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(false);
-    }, 3000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);

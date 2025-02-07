@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./Logo.module.css";
 function Logo() {
-  return <div className={styles.logo}></div>;
+  const nav = useNavigate();
+  return <div className={styles.logo} onClick={() => nav("/home")}></div>;
 }
 
 export default Logo;

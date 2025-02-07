@@ -12,10 +12,14 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  background-image: url("../image/2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: radial-gradient(
+    circle at 30% 70%,
+    /* نقطه شروع خارج از مرکز */ rgba(255, 102, 0, 0.6) 10%,
+    /* هاله نارنجی نرم */ rgba(38, 38, 38, 0.85) 40%,
+    /* خاکستری تیره برای عمق */ rgba(10, 10, 10, 0.95) 80% /* مشکی عمیق */
+  );
+
+  background-attachment: fixed;
 }
 
 .container {

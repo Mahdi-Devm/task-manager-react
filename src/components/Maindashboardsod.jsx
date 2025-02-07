@@ -32,16 +32,31 @@ function Maindashboardsod() {
         {/* نمودار روند سود */}
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
+            <CartesianGrid
+              stroke="rgba(255, 140, 0, 0.3)"
+              strokeDasharray="3 3"
+            />
+            <XAxis dataKey="name" stroke="#ddd" />
+            <YAxis stroke="#ddd" />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "rgba(0, 0, 0, 0.8)",
+                border: "1px solid #FF7300",
+                color: "#fff",
+              }}
+            />
+            <Legend wrapperStyle={{ color: "#fff" }} />
             <Line
               type="monotone"
               dataKey="value"
-              stroke="#8884d8"
-              activeDot={{ r: 8 }}
+              stroke="#FF7300"
+              strokeWidth={3}
+              activeDot={{
+                r: 8,
+                fill: "#FF7300",
+                stroke: "#fff",
+                strokeWidth: 2,
+              }}
             />
           </LineChart>
         </ResponsiveContainer>
