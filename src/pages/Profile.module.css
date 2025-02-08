@@ -18,25 +18,6 @@
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); /* سایه‌ی نارنجی زیبا */
   padding: 20px;
 }
-/* فونت جدید */
-
-.profileBox {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: all 0.3s ease;
-  font-family: "Roboto", sans-serif; /* فونت روبات */
-}
-
-.profileBox:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
 
 h3 {
   font-size: 1.6rem;
@@ -49,19 +30,9 @@ h3 {
 h3:hover {
   color: #ff9800; /* رنگ نارنجی تیره برای هاور */
 }
-
-.profileInfoBox {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.profileLeft,
-.profileRight {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1;
+.extraInfo {
+  font-size: 20px;
+  color: black;
 }
 
 .profileImageContainer {
@@ -75,7 +46,7 @@ h3:hover {
 }
 
 .profileImageContainer:hover {
-  transform: scale(1.1);
+  transform: scale(0.5);
 }
 
 .profileImage {
@@ -88,23 +59,24 @@ h3:hover {
 .userInfo {
   color: #333;
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .userInfo h4 {
   font-size: 1.2rem;
-  color: #333;
+  color: #b9b8b8;
   font-weight: 600;
-  margin-bottom: 10px;
 }
 
 .userInfo p {
   font-size: 1rem;
-  color: #555;
-  margin: 5px 0;
+  color: #b9b8b8;
 }
 
 .userInfo p:first-child {
-  color: #ff7300; /* رنگ نارنجی برای ایمیل */
+  color: #ff7300;
   font-weight: 600;
 }
 
@@ -113,26 +85,10 @@ h3:hover {
 }
 
 .userInfo p:last-child {
-  color: #007bff; /* رنگ آبی برای شغل */
-  font-weight: 600;
-}
-
-/* تغییرات برای هاور */
-.userInfo p:hover {
-  color: #ff9800; /* تغییر رنگ در هنگام هاور */
   font-weight: 600;
 }
 
 /* اضافه کردن استایل برای بخش اطلاعات اضافی */
-.extraInfo {
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #555;
-}
-
-.extraInfo p {
-  color: #007bff; /* رنگ آبی برای اطلاعات اضافی */
-}
 
 .extraInfo strong {
   font-weight: bold;
@@ -141,6 +97,7 @@ h3:hover {
 /* افکت هاور برای اطلاعات اضافی */
 .extraInfo p:hover {
   color: #ff9800;
+  transition: 400 all ease;
 }
 
 /* طراحی باکس پروفایل */
@@ -157,13 +114,15 @@ h3:hover {
   backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
   transition: all 0.3s ease;
+  height: 450px;
 }
 
 .profileBox:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: 400 all ease;
 }
 
 /* هدر */
@@ -192,50 +151,34 @@ h3:hover {
   justify-content: space-between;
 }
 
-.profileBox {
-  background: rgba(246, 212, 212, 0.1);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(138, 133, 133, 0.2);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: all 0.3s ease;
-}
-
-.profileBox:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
 h3 {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   color: #ff7300;
   text-align: center;
+  transition: 400 all ease;
 }
 
-.profileInfoBox {
+.profileLeft {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
   gap: 20px;
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 33, 33, 0.6),
+    rgba(148, 99, 66, 0.3)
+  );
+  box-shadow: 0px 8px 20px rgba(255, 102, 0, 0.3);
+  border-radius: 15px;
+  padding: 10px;
 }
-
-.profileLeft,
 .profileRight {
   display: flex;
   flex-direction: row;
   gap: 20px;
   flex: 1;
 }
-
 .profileImageContainer {
   position: relative;
   width: 120px;
@@ -248,6 +191,7 @@ h3 {
 
 .profileImageContainer:hover {
   transform: scale(1.1);
+  transition: 400 all ease;
 }
 
 .profileImage {
@@ -257,53 +201,35 @@ h3 {
   border-radius: 50%;
 }
 
-.userInfo {
-  color: #333;
-  font-family: "Open Sans", sans-serif;
-}
-
-.userInfo h4 {
-  font-size: 1.2rem;
-  color: #333;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.profileBox {
-  background: rgba(246, 212, 212, 0.1);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(138, 133, 133, 0.2);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-.userInfo p {
-  font-size: 1rem;
-  color: #555;
-  margin: 5px 0;
-}
-
-.userInfo p:first-child {
-  color: #ff7300;
-  font-weight: 600;
-}
-
-.userInfo p:nth-child(2) {
-  font-weight: 400;
-}
-
-.userInfo p:last-child {
-  color: #007bff;
-  font-weight: 600;
-}
-
 /* اضافه کردن استایل برای بخش اطلاعات اضافی */
 .extraInfo {
   margin-top: 20px;
   font-size: 1rem;
 }
+.extraInfo:hover {
+  margin-top: 20px;
+  font-size: 1rem;
+  transition: 400 all ease;
+}
 
 .extraInfo p {
-  color: #007bff;
+  color: #dedede;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 33, 33, 0.6),
+    rgba(148, 99, 66, 0.3)
+  );
+
+  margin: 5px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+}
+.extraInfo p:hover {
+  transition: 400ms all ease;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+  transform: translateY(-2px);
 }
 
 .extraInfo strong {
@@ -318,11 +244,12 @@ h3 {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   flex: 1 1 45%;
   backdrop-filter: blur(5px);
+  height: 350px;
 }
 
 /* باکس تسک‌ها و فعالیت‌ها */
@@ -363,4 +290,104 @@ ul {
 li {
   padding: 5px 0;
   color: #555;
+}
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+  border-top: 1px solid transparent;
+
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: start;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 33, 33, 0.6),
+    rgba(148, 99, 66, 0.3)
+  );
+  box-shadow: 0px 8px 20px rgba(255, 102, 0, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(191, 123, 41, 0.3);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* افکت هاور برای جذابیت بیشتر */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 30px rgba(255, 102, 0, 0.5);
+  border: 1px solid rgba(255, 140, 0, 0.5);
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  color: #ffb74d;
+  font-weight: bold;
+}
+
+.cardNumber {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.percentageChange {
+  font-size: 14px;
+  color: gray;
+  margin-top: 5px;
+}
+
+.cardIcon {
+  font-size: 50px;
+  color: #ff8f00;
+  background: rgba(255, 111, 0, 0.2);
+  padding: 12px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardIcon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .topSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }

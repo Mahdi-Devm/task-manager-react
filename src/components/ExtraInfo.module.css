@@ -1,0 +1,178 @@
+.extraInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 15px;
+  border-radius: 10px;
+
+  width: 100%;
+  max-width: 400px;
+}
+.saveButton {
+  background: #ff9800;
+  color: white;
+  border: none;
+
+  border-radius: 5px; /* گوشه‌های گرد */
+  cursor: pointer;
+  font-size: 12px; /* اندازه فونت کوچکتر */
+  transition: background 0.3s ease;
+  height: 50px;
+}
+.editContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.viewContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.saveButton {
+  background: #ff9800;
+  color: white;
+  border: none;
+
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.saveButton:hover {
+  background: #e67e00;
+}
+
+.saveButton:hover {
+  background: #e67e00;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.infoItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.3);
+}
+
+strong {
+  font-weight: bold;
+  color: #ff9800;
+}
+.profileInfoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1px;
+  height: 100px;
+}
+
+.infoText {
+  color: #ddd;
+  font-size: 14px;
+}
+
+.editInput {
+  padding: 6px;
+  border: 1px solid rgba(255, 140, 0, 0.4);
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: border 0.3s ease;
+}
+
+.editInput:focus {
+  border-color: #090602;
+}
+
+.editIcon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #ff9800;
+  transition: transform 0.2s ease;
+}
+.extraInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: row-reverse; /* معکوس کردن ترتیب المان‌ها */
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.infoItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.3);
+}
+
+strong {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.infoText {
+  color: #ddd;
+  font-size: 14px;
+}
+
+.editInput {
+  padding: 6px;
+  border: 1px solid rgba(255, 140, 0, 0.4);
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: border 0.3s ease;
+}
+
+.editInput:focus {
+  border-color: #090602;
+}
+
+.editIcon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #ff9800;
+  transition: transform 0.2s ease;
+}
+
+.saveButton {
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  height: 50px;
+  padding: 0 12px;
+}
+
+.saveButton:hover {
+  background: #e67e00;
+}
