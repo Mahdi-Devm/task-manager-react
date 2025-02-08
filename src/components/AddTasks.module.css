@@ -1,5 +1,5 @@
 .addTaskContainer {
-  background-color: rgba(255, 87, 34, 0.1); /* تغییر به نارنجی کم‌رنگ */
+  background-color: rgba(255, 87, 34, 0.1);
   backdrop-filter: blur(8px);
   padding: 20px;
   border-radius: 15px;
@@ -34,7 +34,7 @@
 }
 
 .inputField:focus {
-  border: 1px solid #ff9800; /* رنگ مرز در حالت focus */
+  border: 1px solid #ff9800;
   box-shadow: 0 0 5px rgba(255, 152, 0, 0.7);
 }
 
@@ -47,16 +47,12 @@
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #ff9800; /* رنگ نارنجی برای آیکن تاریخ */
+  color: #ff9800;
   font-size: 18px;
 }
 
 .addTaskButton {
-  background: linear-gradient(
-    145deg,
-    #ff5722,
-    #ff9800
-  ); /* رنگ‌های نارنجی برای دکمه */
+  background: linear-gradient(145deg, #ff5722, #ff9800);
   color: white;
   padding: 12px 20px;
   border-radius: 8px;
@@ -83,7 +79,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 87, 34, 0.8); /* مودال با رنگ نارنجی */
+  background-color: rgba(255, 87, 34, 0.8);
   color: white;
   padding: 20px;
   border-radius: 10px;

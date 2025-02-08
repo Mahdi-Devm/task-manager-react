@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { FaGoogle } from "react-icons/fa";
 import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
+import { OperatorContext } from "./ContextApi";
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -10,7 +11,11 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [termsAgreed, setTermsAgreed] = useState(false);
 
-  console.log("hi");
+  const { setCount, count } = useContext(OperatorContext);
+
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
 
   const handleNameChange = (e) => setName(e.target.value);
   const handleLastNameChange = (e) => setLastName(e.target.value);
@@ -18,12 +23,20 @@ export default function Login() {
   const handlePasswordChange = (e) => setPassword(e.target.value);
   const handleTermsChange = (e) => setTermsAgreed(e.target.checked);
   const navigator = useNavigate();
+
   function handleSubmit(e) {
     e.preventDefault();
     if (!name || !lastName || !email || !password || !termsAgreed) {
       alert("Please fill in all fields");
       return;
     }
+    const user = {
+      name,
+      lastName,
+      email,
+      password,
+    };
+    setCount(user);
     setName("");
     setLastName("");
     setEmail("");
@@ -82,7 +95,9 @@ export default function Login() {
               <p>I agree to the terms and conditions</p>
             </div>
             <div className={styles.suggestForm}>
-              <button onClick={handleSubmit}>Create Account</button>
+              <button type="submit" onClick={handleSubmit}>
+                Create Account
+              </button>
               <button className={styles.google}>
                 <FaGoogle /> Google
               </button>

@@ -4,18 +4,16 @@ import styles from "./ExtraInfo.module.css";
 
 function ExtraInfo() {
   const [editField, setEditField] = useState(null);
-  const [editedInfo, setEditedInfo] = useState(info);
+  const [editedInfo, setEditedInfo] = useState({});
   const [info, setInfo] = useState({
     interests: "برنامه‌نویسی، طراحی وب",
     phone: "0912-3456789",
     nationalId: "1234567890",
   });
-  if (!info) {
-    setInfo("");
-  }
+
   useEffect(() => {
     setEditedInfo(info);
-  }, [info]); // هر وقت `info` تغییر کرد، مقدار `editedInfo` هم تغییر کند.
+  }, [info]);
 
   const handleEdit = (key) => setEditField(key);
 
@@ -26,6 +24,8 @@ function ExtraInfo() {
   const handleBlur = () => setEditField(null);
 
   const handleSave = () => {
+    setInfo(editedInfo);
+    setEditField(null);
     console.log(editedInfo);
   };
 

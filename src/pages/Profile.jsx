@@ -19,6 +19,8 @@ import HeaFoot from "../components/HeaFoot";
 import WelcomeMessage from "../components/WelcomeMessage ";
 
 import ExtraInfo from "../components/ExtraInfo";
+import { OperatorContext } from "../components/ContextApi";
+import { useContext, useEffect } from "react";
 const data = [
   { name: "فروردین", value: 400 },
   { name: "اردیبهشت", value: 450 },
@@ -30,6 +32,11 @@ const data = [
 ];
 
 function Profile() {
+  const { count } = useContext(OperatorContext);
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
+
   return (
     <div className={styles.container}>
       <HeaFoot />
@@ -47,9 +54,9 @@ function Profile() {
                 />
               </div>
               <div className={styles.userInfo}>
-                <h4>نام: مهدی رضایی</h4>
-                <p>ایمیل: mehdi@example.com</p>
-                <p>رمز عبور: *********</p>
+                <h4>نام: {count.name}</h4>
+                <p>ایمیل: {count.email}</p>
+                <p>رمز عبور: {count.password}</p>
               </div>
             </div>
             <div className={styles.profileRight}>
